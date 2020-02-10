@@ -19,4 +19,9 @@ branch is TAKEN, the speculatively fetched instruction from PC+4 is quashed in
 its ID/RF stage using the nop bit and the next instruction is fetched from the
 effective branch address. Execution now proceeds normally.
 
-#### 
+#### In this lab, you will simulate a correlating branch predictor that makes use of 2-bit saturating counters. You are provided with a text file containing a trace of branch instructions consisting of the PC at which each branch occurs, and whether the branch is Taken or Not Taken. 
+Your design must consist of 2m+k 2-bit saturating counters indexed using m LSBs of each branch instruction and a k bit Branch History Register (BHR) that records the outcomes of the previous k branches. Each 2-bit saturating predictor starts in the 11 (Predict Taken with High Confidence) state and is updated as per the finite state machine discussed in Lecture 12. Further, you can assume that the BHR is initialized assuming the previous k branches were Taken.  
+The values of m and k are specified in a config file config.txt. 
+The maximum values of m = 20 and k = 8.
+
+
